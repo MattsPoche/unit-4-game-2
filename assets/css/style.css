@@ -1,0 +1,11 @@
+#bench{
+    display: flex;
+}
+.fighter{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 5px;
+    margin-right: 10px;
+}
