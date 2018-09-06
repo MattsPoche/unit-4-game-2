@@ -1,11 +1,66 @@
+body{
+    background: url(../images/starbackground.jpg);
+}
+button{
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 #bench{
     display: flex;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+#yourCharacter{
+    width: 860px;
+    height: 125px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+#defender{
+    width: 860px;
+    height: 125px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+#info{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+}
+
+.title{
+    font-size: 40px;
+    color:gold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    height: 50px;
+    padding: 5px;
+    margin: 20px;
 }
 .fighter{
     display: inline-block;
-    width: 100px;
+    width: 200px;
     height: 100px;
-    background-color: aqua;
+    background-color: black;
     padding: 5px;
     margin-right: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
 }
