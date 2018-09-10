@@ -53,9 +53,13 @@ button{
     padding: 5px;
     margin: 20px;
 }
+/* .fighterstat{
+    clear: right;
+    float:left;
+} */
 .fighter{
     display: inline-block;
-    width: 200px;
+    width: 300px;
     height: 100px;
     background-color: black;
     padding: 5px;
@@ -63,4 +67,11 @@ button{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
+}
+.fighterimg{
+    display: flex;
+    float: right;
+    clear: left;
+    width: 100px;
+    height: 100px;
 }

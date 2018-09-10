@@ -1,12 +1,13 @@
 $(document).ready(function(){
     //Fighter class declaration
     let Fighter = class{
-        constructor(hp, ap, cap, name){
+        constructor(hp, ap, cap, name, imgStr){
             this.hp = hp;
             this.ap = ap;
             this.cap= cap;
             this.name = name;
-            this.numAtt = 1;            
+            this.numAtt = 1;  
+            this.imgStr = imgStr;          
         }
         getHp(){
             return this.hp;
@@ -22,6 +23,9 @@ $(document).ready(function(){
         }
         getNumAtt(){
             return this.numAtt;
+        }
+        getImgStr(){
+            return this.imgStr;
         }
         defend(attack){
             this.hp -= attack;
@@ -48,19 +52,20 @@ $(document).ready(function(){
             var fdiv = $("<div>");
             fdiv.addClass("fighter");
             fdiv.attr("data-index", i);
-            fdiv.append("<div id='name'>"+fighters[i].getName()+"</div>");
-            fdiv.append("<div id='hp'> Health: "+fighters[i].getHp()+"</div>");
-            fdiv.append("<div id='ap'> Attack: "+fighters[i].getAp()+"</div>");
-            fdiv.append("<div id='cap'> Counter Attack: "+fighters[i].getCap()+"</div>");
+            fdiv.append("<img class='fighterimg' src='assets/images/"+fighters[i].getImgStr()+"' alt='"+fighters[i].getName()+"' >");
+            fdiv.append("<div class='fighterstat' id='name'>"+fighters[i].getName()+"</div>");
+            fdiv.append("<div class='fighterstat' id='hp'> Health: "+fighters[i].getHp()+"</div>");
+            fdiv.append("<div class='fighterstat' id='ap'> Attack: "+fighters[i].getAp()+"</div>");
+            fdiv.append("<div class='fighterstat' id='cap'> Counter Attack: "+fighters[i].getCap()+"</div>");
 
             $("#bench").append(fdiv);
         }
     };
     
     //tests if an element is empty
-    var isEmpty = function( el ){
-        return !$.trim(el.html());
-    }
+    // var isEmpty = function( el ){
+    //     return !$.trim(el.html());
+    // }
 
     //displays ui text
     var displayText = function(fighters){
@@ -89,10 +94,10 @@ $(document).ready(function(){
 
     //global vars
     var fighters = [];
-    fighters.push(new Fighter(100, 5, 6, "Luke Skywalker"));
-    fighters.push(new Fighter(120, 6, 6, "Obi-Wan Kenobi"));
-    fighters.push(new Fighter(150, 10, 7, "Darth Sidious"));
-    fighters.push(new Fighter(180, 10, 9, "Darth Vader"));
+    fighters.push(new Fighter(100, 5, 6, "Luke Skywalker", "LukeSkywalker.png"));
+    fighters.push(new Fighter(120, 6, 6, "Obi-Wan Kenobi", "Obi-Wan-Kenobi.png"));
+    fighters.push(new Fighter(150, 10, 7, "Darth Sidious", "DarthSidious.png"));
+    fighters.push(new Fighter(180, 10, 9, "Darth Vader", "DarthVader.png"));
     let state = gameState.PLAYER_SELECT;
     addFighters(fighters);
 
